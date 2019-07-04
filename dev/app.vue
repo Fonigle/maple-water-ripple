@@ -1,5 +1,6 @@
 <template>
-    <div class="app">11111111</div>
+    <div class="app"
+         v-ripple>11111111</div>
 </template>
 <script lang="ts">
     import { Vue, Component } from "vue-property-decorator";
@@ -17,6 +18,11 @@
             margin: 0;
 
             .app {
+                height: 100%;
+                width: 100%;
+                background: url("./images/bg2.jpg");
+                background-size: cover;
+                background-position: 50% 0;
                 height: 100%;
             }
         }

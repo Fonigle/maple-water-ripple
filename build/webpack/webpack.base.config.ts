@@ -21,8 +21,6 @@ module.exports = {
         alias: {
             "vue$": "vue/dist/vue.runtime.esm.js",
             "@": path.resolve("src"),
-            "mixins": path.resolve("src/mixins"),
-            "utils-scss": path.resolve("src/utils/scss/utils-scss.scss")
         }
     },
     module: {
