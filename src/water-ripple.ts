@@ -451,11 +451,12 @@ class WaterRipple {
     }
 
     private loadImage() {
-        const { gl } = this;
+        const { el, gl } = this;
+        // console.log();
 
         var newImageSource = this.imageUrl ||
             extractUrl(this.originalCssBackgroundImage || '') ||
-            extractUrl(this.el.style.backgroundImage || '');
+            extractUrl(getComputedStyle(el).backgroundImage || '');
 
         // If image source is unchanged, don't reload it.
         if (newImageSource == this.imageSource) {
@@ -463,6 +464,7 @@ class WaterRipple {
         }
 
         this.imageSource = newImageSource || '';
+
 
         // Falsy source means no background.
         if (!this.imageSource) {
@@ -751,7 +753,7 @@ class WaterRipple {
             canvas.width = el.clientWidth;
             canvas.height = el.clientHeight;
             this.canvas = canvas;
-            canvas.setAttribute('style', 'position: "absolute"; left: 0; top: 0; right: 0; bottom: 0; zIndex: -1；');
+            canvas.setAttribute('style', 'position: absolute; left: 0; top: 0; right: 0; bottom: 0; z-index: -1;');
 
             this.el.classList.add('mp-water-ripple');
             this.el.appendChild(this.canvas);

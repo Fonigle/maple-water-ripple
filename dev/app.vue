@@ -20,7 +20,7 @@
             .app {
                 height: 100%;
                 width: 100%;
-                background: url("./images/bg2.jpg");
+                background-image: url("./images/bg2.jpg");
                 background-size: cover;
                 background-position: 50% 0;
                 height: 100%;
